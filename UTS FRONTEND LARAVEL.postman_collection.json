@@ -1,0 +1,380 @@
+{
+	"info": {
+		"_postman_id": "031730b2-3574-4fdc-b783-393d63008c6c",
+		"name": "UTS FRONTEND LARAVEL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13674288"
+	},
+	"item": [
+		{
+			"name": "PATIENTS",
+			"item": [
+				{
+					"name": "ALL PATIENTS",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{url}}patients",
+							"host": [
+								"{{url}}patients"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "wardana",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": "de",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "positif",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "tanggal_keluar",
+									"description": "tanggal_masuk,tanggal_keluar,address",
+									"disabled": true
+								},
+								{
+									"key": "order",
+									"value": "asc",
+									"description": "asc,desc",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ADD PATIENT",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Mahesa",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "081288789872",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Depok",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "meninggal",
+									"type": "text"
+								},
+								{
+									"key": "in_date_at",
+									"value": "2021-12-10",
+									"type": "text"
+								},
+								{
+									"key": "out_date_at",
+									"value": "2021-10-10",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}patients",
+							"host": [
+								"{{url}}patients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SHOW PATIENT",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{url}}patients/:id",
+							"host": [
+								"{{url}}patients"
+							],
+							"path": [
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE PATIENT",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "rama mahesa",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "081288789878",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": "kelapa 2",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "positif",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "in_date_at",
+									"value": "2021-10-17",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "out_date_at",
+									"value": "2021-10-17",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}patients/:id",
+							"host": [
+								"{{url}}patients"
+							],
+							"path": [
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE PATIENT",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{url}}patients/:id",
+							"host": [
+								"{{url}}patients"
+							],
+							"path": [
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "REGISTER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "rama mahesa wardana",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "ramamahesa@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}register",
+					"host": [
+						"{{url}}register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "ramamahesa@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}login",
+					"host": [
+						"{{url}}login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8080/api/",
+			"type": "string"
+		},
+		{
+			"key": "jwt",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJCRS1MQVJBVkVMIiwiYXVkIjoiRlJPTlRFTkQiLCJpYXQiOjE3MDA2OTMwMTYsIm5iZiI6MTcwMDY5MzAxNiwiZXhwIjoxNzAwNzc5NDE2LCJkYXRhIjoiZXlKcGRpSTZJbkpzVmpWb2QwMW1TRUphZVdOWlRXRnhWblp6VlhjOVBTSXNJblpoYkhWbElqb2llbFZoYUZaaWFuRm9WV2hSYjFCU2NucHVkVmh5ZHowOUlpd2liV0ZqSWpvaVkySXlNMlU1TmprNU1EVmtOR1E0T0RJeFptRTBNVFE1TWpCa01EQmxPVFkwWkRSa1pUbGtZalU1WW1FNU5EZ3lNMll5TlRKaE1UazBPRFF5T1RZeU1TSXNJblJoWnlJNklpSjkifQ.wIWEPiIfSI17rikQbe3DATrwMeqR2owCJ1sPg9vDuCM"
+		}
+	]
+}
